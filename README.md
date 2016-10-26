@@ -4,6 +4,9 @@ CONTENTS OF THIS FILE
  * Introduction
  * Requirements
  * Description
+ * Options
+ * Examples
+ * License
  * Author
 
 
@@ -32,6 +35,34 @@ written to an output file.
 
 Localised links are not processed. A localised link is a link that
 contains any locale identifier listed in languages.txt or locales.txt (data).
+
+
+OPTIONS
+-------
+
+Positional arguments:
+  url              URL to crawl
+
+Optional arguments:
+  -h, --help       show this help message and exit
+  -l n, --links n  maximum number of links to crawl
+  -o of, --out of  write output to file (default STDOUT)
+  -s, --strict     abort the execution if any page does not return a 200 code
+  -q, --quiet      run in quiet mode; it can only be used with --out
+  -v, --verbose    run in verbose mode
+  --version        show program's version number and exit
+
+
+EXAMPLES
+--------
+	./web-crawler.py www.domain.com
+	./web-crawler.py www.domain.com -o out-file.txt
+	./web-crawler.py http://www.domain.com --links 3
+	
+
+LICENSE
+-------
+This script is in the public domain, free from copyrights or restrictions.
 
 
 AUTHOR
